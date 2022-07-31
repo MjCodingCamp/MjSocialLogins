@@ -1,0 +1,6 @@
+framework module MjSocialLogins {
+  umbrella header "MjSocialLogins-umbrella.h"
+
+  export *
+  module * { export * }
+}

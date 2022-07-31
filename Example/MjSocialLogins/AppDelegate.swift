@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  MjSocialLogins
 //
-//  Created by deepak-myysports on 07/26/2022.
-//  Copyright (c) 2022 deepak-myysports. All rights reserved.
+//  Created by Mohammad Jeesha on 07/26/2022.
+//  Copyright (c) 2022 Mohammad Jeesha. All rights reserved.
 //
 
 import UIKit
