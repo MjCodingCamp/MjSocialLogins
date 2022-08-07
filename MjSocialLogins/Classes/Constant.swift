@@ -23,3 +23,13 @@ let kUserIdTokenNotFound = "User id token not found."
 let kUserDataNotFound = "User data not found."
 let kAppleDeclinedPermissions = "Apple permission has been declined."
 let kAccessTokenNotFound = "User access token not found."
+
+
+//MARK: some constant errors
+public enum GoogleAuthError {
+    case rootViewControllerNotFound
+    case userIdNotFound
+    case userIdTokenNotFound
+    case userDataNotFound
+    case unknown(String)
+}
