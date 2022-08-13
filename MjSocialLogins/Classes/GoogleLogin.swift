@@ -1,14 +1,21 @@
+//
+//  GoogleLogin.swift
+//  MjSocialLogins
+//
+//  Created by Mohammad Jeeshan on 30/07/22.
+//  Copyright (c) 2022 Mohammad Jeeshan. All rights reserved.
+//
+
 import SwiftUI
 import UIKit
 import GoogleSignIn
 
 public protocol GoogleLoginStatusDelegate {
-    func loginSuccess(userID: String, idToken: String, profileImageUrl: String?,
-                      email: String?, firstName: String?, lastName: String?)
-    func loginFail(error: GoogleAuthError)
+    func googleLoginSuccess(userID: String, idToken: String, userProfile: GIDProfileData)
+    func googleLoginFail(error: GoogleAuthError)
 }
 
-open class GoogleLoginController {
+public class GoogleLoginController {
     private var delegate: GoogleLoginStatusDelegate?
     
     public init(delegate: GoogleLoginStatusDelegate) {
@@ -17,7 +24,8 @@ open class GoogleLoginController {
     
     public func beginGoogleLogin(clientID: String){
         guard let rootViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {
-            self.delegate?.loginFail(error: .rootViewControllerNotFound)
+            self.delegate?.googleLoginFail(error: .rootViewControllerNotFound)
+            self.delegate = nil
             return
         }
         signIn(clientID: clientID, viewController: rootViewController)
@@ -27,27 +35,31 @@ open class GoogleLoginController {
         let signInConfig = GIDConfiguration.init(clientID: clientID)
         GIDSignIn.sharedInstance.signIn( with: signInConfig, presenting: viewController) { user, error in
             if let error = error {
-                self.delegate?.loginFail(error: .unknown(error.localizedDescription))
+                self.delegate?.googleLoginFail(error: .unknown(error.localizedDescription))
+                self.delegate = nil
             } else {
                 guard let currentUser = user else {
-                    self.delegate?.loginFail(error: .userDataNotFound)
+                    self.delegate?.googleLoginFail(error: .userDataNotFound)
+                    self.delegate = nil
                     return
                 }
                 guard let userID = currentUser.userID else {
-                    self.delegate?.loginFail(error: .userIdNotFound)
+                    self.delegate?.googleLoginFail(error: .userIdNotFound)
+                    self.delegate = nil
                     return
                 }
                 guard let idToken = currentUser.authentication.idToken else {
-                    self.delegate?.loginFail(error: .userIdTokenNotFound)
+                    self.delegate?.googleLoginFail(error: .userIdTokenNotFound)
+                    self.delegate = nil
                     return
                 }
-                let userEmail = currentUser.profile?.email
-                let firstName = currentUser.profile?.givenName
-                let lastName = currentUser.profile?.familyName
-                let profileImageUrl = currentUser.profile?.imageURL(withDimension: 100)?.absoluteString
-                self.delegate?.loginSuccess(userID: userID, idToken: idToken,
-                                           profileImageUrl: profileImageUrl, email: userEmail,
-                                           firstName: firstName, lastName: lastName)
+                guard let userProfile = currentUser.profile else {
+                    self.delegate?.googleLoginFail(error: .userProfileNotFound)
+                    self.delegate = nil
+                    return
+                }
+                self.delegate?.googleLoginSuccess(userID: userID, idToken: idToken,userProfile: userProfile)
+                self.delegate = nil
             }
         }
     }

@@ -316,7 +316,6 @@
 		9B99BDB3B5702E720689D1258D1E2EAA /* FBSDKMeasurementEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 89102A5894D31F2C27AB86E08156136A /* FBSDKMeasurementEvent.m */; };
 		9C450BD1F73C35CDEB609C1562B6BBCC /* FBSDKInternalUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 0906BF7985106BFBB5DA69861BE96DAD /* FBSDKInternalUtility.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9C5669F1AF111AE23BCE870F341EE383 /* FBSDKAppEvents+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0051CD5363D9895E17162A0371168A9D /* FBSDKAppEvents+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		9C9136CD251C8AC673602C59D8CB7572 /* FbLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEAA8F2B74495112DCEB40D3D389AF3 /* FbLogin.swift */; };
 		9CBA71157D0123D5CDDFF43FED62FE53 /* FBSDKKeychainStoreViaBundleID.m in Sources */ = {isa = PBXBuildFile; fileRef = E067FA70BFA57F9AFACF5BE70BF6C05F /* FBSDKKeychainStoreViaBundleID.m */; };
 		9CD929ADFB98BCE99BB8C42F1D73F0B9 /* MjSocialLogins-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D92AE439DD90A157EEF2BFF81AA80456 /* MjSocialLogins-dummy.m */; };
 		9E446BE4057BFB71D703FBA219517E40 /* GTMAppAuth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DDF82F3499B1767492953EEEB3ACBED /* GTMAppAuth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -472,11 +471,12 @@
 		EB37F84A236337470DD5CE469617467A /* FBSDKCrashShield.m in Sources */ = {isa = PBXBuildFile; fileRef = 447E2EB1022B463FBC1FA015089071FB /* FBSDKCrashShield.m */; };
 		EBAFB8890DA6E0C3DFE16F3B2DABF66C /* FBLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47320A6FB9034E454DF24462482736D /* FBLoginButton.swift */; };
 		EBE36AFF9964F232ABAEA6E260C5CF82 /* OIDServiceDiscovery.h in Headers */ = {isa = PBXBuildFile; fileRef = 248CBEB1065F579B82CF2AB6C3C4C484 /* OIDServiceDiscovery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC125E2228A2039F0045A01F /* FbLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC125E2128A2039F0045A01F /* FbLogin.swift */; };
 		EC1E75658FD8F993E39D5B95D62F1974 /* FBSDKContainerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70446812E7B567452401E3F6568D6568 /* FBSDKContainerViewController.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EC4A9FAE28A80F8600D485EE /* AppleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A9FAD28A80F8600D485EE /* AppleLogin.swift */; };
+		EC4A9FB028A8101B00D485EE /* KeyChainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4A9FAF28A8101B00D485EE /* KeyChainData.swift */; };
 		EC73553A155F9C0B12E35ABBC9C3377A /* FBSDKCopying.h in Headers */ = {isa = PBXBuildFile; fileRef = B3482ED145F86D3BBC7695D47A342798 /* FBSDKCopying.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECC804E52896A2B800D2A5E6 /* GoogleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC804E42896A2B800D2A5E6 /* GoogleLogin.swift */; };
-		ECC804EA2896A76C00D2A5E6 /* AppleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC804E82896A76C00D2A5E6 /* AppleLogin.swift */; };
-		ECC804EB2896A76C00D2A5E6 /* KeyChainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC804E92896A76C00D2A5E6 /* KeyChainData.swift */; };
 		ED15F02443B7ADB74140AA258C1A94CC /* FBSDKDeviceLoginCodeInfo+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 260F1B1DC92316D82145569E52859DA5 /* FBSDKDeviceLoginCodeInfo+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		ED1B0890B57335BA84B436FDF9C7772C /* FBSDKURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7138E87FF7CAAB93F8F7B4152EB66D /* FBSDKURLSession.m */; };
 		ED5918E9C3A5BFF916F4BB35DA7D5B60 /* FBSDKWebDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 7667B62ADA98A80378E1107161722035 /* FBSDKWebDialog.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -932,7 +932,6 @@
 		8B8F903D7CB4194CAE104D6BD37AF1D3 /* FBSDKMonitoringConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKMonitoringConfiguration.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Monitoring/FBSDKMonitoringConfiguration.h; sourceTree = "<group>"; };
 		8BC307788CBC6FCBEAC268A9DED0CB0F /* GTMSessionFetcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMSessionFetcher.debug.xcconfig; sourceTree = "<group>"; };
 		8C2E8A1A806869AD9E31CCAC2E0D0D84 /* OIDScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopes.h; path = Source/AppAuthCore/OIDScopes.h; sourceTree = "<group>"; };
-		8CEAA8F2B74495112DCEB40D3D389AF3 /* FbLogin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FbLogin.swift; path = MjSocialLogins/Classes/FbLogin.swift; sourceTree = "<group>"; };
 		8D11A017C83931426239E038A4643183 /* AppAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppAuth-prefix.pch"; sourceTree = "<group>"; };
 		8D361730B64F943A475994B15EADED88 /* GTMOAuth2KeychainCompatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMOAuth2KeychainCompatibility.m; path = GTMAppAuth/Sources/GTMOAuth2KeychainCompatibility.m; sourceTree = "<group>"; };
 		8DCFD11EE17DEAAD81D01F301E72C3C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
@@ -1154,12 +1153,13 @@
 		EB312F3EF66EFEF800F43B60D90AACBD /* FBSDKMonitorHeaders.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKMonitorHeaders.h; path = FBSDKCoreKit/FBSDKCoreKit/Internal/Monitoring/FBSDKMonitorHeaders.h; sourceTree = "<group>"; };
 		EBA5C3D3172CC6C0CA01549A66DB2D4A /* FBSDKTensor.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = FBSDKTensor.hpp; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/ML/FBSDKTensor.hpp; sourceTree = "<group>"; };
 		EBE290A4D6EC06E5DD1458AEE9A51E27 /* FBSDKProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSDKProfile.m; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKProfile.m; sourceTree = "<group>"; };
+		EC125E2128A2039F0045A01F /* FbLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbLogin.swift; sourceTree = "<group>"; };
 		EC1D1115EF096E92DEB38DB2FB9F7E2D /* fr_CA.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr_CA.lproj; path = GoogleSignIn/Sources/Strings/fr_CA.lproj; sourceTree = "<group>"; };
+		EC4A9FAD28A80F8600D485EE /* AppleLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleLogin.swift; sourceTree = "<group>"; };
+		EC4A9FAF28A8101B00D485EE /* KeyChainData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainData.swift; sourceTree = "<group>"; };
 		EC8F4D0BE3B0C192EBA4A93F8887D89F /* FBSDKCoreKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSDKCoreKit; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB40F80D1E243497F8C2C7F8BA181D6 /* FBSDKModelParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKModelParser.h; path = FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/ML/FBSDKModelParser.h; sourceTree = "<group>"; };
 		ECC804E42896A2B800D2A5E6 /* GoogleLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleLogin.swift; path = MjSocialLogins/Classes/GoogleLogin.swift; sourceTree = "<group>"; };
-		ECC804E82896A76C00D2A5E6 /* AppleLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleLogin.swift; path = MjSocialLogins/Classes/AppleLogin.swift; sourceTree = "<group>"; };
-		ECC804E92896A76C00D2A5E6 /* KeyChainData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyChainData.swift; path = MjSocialLogins/Classes/KeyChainData.swift; sourceTree = "<group>"; };
 		ED55E799818EA5D46E58E4843BBD05CB /* FBSDKAccessToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSDKAccessToken.h; path = FBSDKCoreKit/FBSDKCoreKit/FBSDKAccessToken.h; sourceTree = "<group>"; };
 		EDA8D7A09C28C70C679A19391EB6429F /* GIDProfileData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GIDProfileData.h; path = GoogleSignIn/Sources/Public/GoogleSignIn/GIDProfileData.h; sourceTree = "<group>"; };
 		EDDF5CA4662B35D2C8AFA78242B1EC25 /* GIDSignInInternalOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GIDSignInInternalOptions.h; path = GoogleSignIn/Sources/GIDSignInInternalOptions.h; sourceTree = "<group>"; };
@@ -2084,11 +2084,11 @@
 		E10434C774F726CCFCF24674B02EBF01 /* MjSocialLogins */ = {
 			isa = PBXGroup;
 			children = (
-				ECC804E82896A76C00D2A5E6 /* AppleLogin.swift */,
+				EC4A9FAF28A8101B00D485EE /* KeyChainData.swift */,
+				EC4A9FAD28A80F8600D485EE /* AppleLogin.swift */,
+				EC125E2128A2039F0045A01F /* FbLogin.swift */,
 				75346E16CDA6DF077156BD3E69410EF4 /* Constant.swift */,
-				8CEAA8F2B74495112DCEB40D3D389AF3 /* FbLogin.swift */,
 				ECC804E42896A2B800D2A5E6 /* GoogleLogin.swift */,
-				ECC804E92896A76C00D2A5E6 /* KeyChainData.swift */,
 				AF429B2E485690E7437ACDBF3866689E /* Pod */,
 				0065261504A2C19EE99038AF4AC64BCC /* Support Files */,
 			);
@@ -3119,10 +3119,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECC804EA2896A76C00D2A5E6 /* AppleLogin.swift in Sources */,
 				BFDBB17805A4D6570C3E6AF73FACE14C /* Constant.swift in Sources */,
-				9C9136CD251C8AC673602C59D8CB7572 /* FbLogin.swift in Sources */,
-				ECC804EB2896A76C00D2A5E6 /* KeyChainData.swift in Sources */,
+				EC4A9FAE28A80F8600D485EE /* AppleLogin.swift in Sources */,
+				EC125E2228A2039F0045A01F /* FbLogin.swift in Sources */,
+				EC4A9FB028A8101B00D485EE /* KeyChainData.swift in Sources */,
 				ECC804E52896A2B800D2A5E6 /* GoogleLogin.swift in Sources */,
 				9CD929ADFB98BCE99BB8C42F1D73F0B9 /* MjSocialLogins-dummy.m in Sources */,
 			);

@@ -15,21 +15,27 @@ let kFieldsName = "id, name, email"
 let kAppleUserName = "appleUserName"
 let kAppleUserEmail = "appleUserEmail"
 
-//MARK: some constant errors
-let kTokenNotFound = "Token not found, please try again."
-let kRootViewControllerNotFound = "Root ViewController not found."
-let kUserIdNotFound = "User id not found."
-let kUserIdTokenNotFound = "User id token not found."
-let kUserDataNotFound = "User data not found."
-let kAppleDeclinedPermissions = "Apple permission has been declined."
-let kAccessTokenNotFound = "User access token not found."
+//MARK: some constant error enums
+public enum FbAuthError {
+    case facebookDeclinedPermissions
+    case tokenNotFound
+    case userDataNotFound
+    case facebookLoginCancelled
+    case unknown(String)
+}
 
-
-//MARK: some constant errors
 public enum GoogleAuthError {
     case rootViewControllerNotFound
     case userIdNotFound
     case userIdTokenNotFound
+    case userDataNotFound
+    case userProfileNotFound
+    case unknown(String)
+}
+
+public enum AppleAuthError {
+    case appleDeclinedPermissions
+    case accessTokenNotFound
     case userDataNotFound
     case unknown(String)
 }
