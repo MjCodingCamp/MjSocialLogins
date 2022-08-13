@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MjSocialLogins'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.swift_version    = '5.0'
   s.summary          = 'A simple & light weight open source library for all standard social logins.'
 

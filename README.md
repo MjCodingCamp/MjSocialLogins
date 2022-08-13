@@ -22,7 +22,7 @@ pod 'MjSocialLogins'
 
 ## Author
 
-deepak-myysports, mohammad.jeeshan.91@gmail.com
+Mohammad Jeeshan, mohammad.jeeshan.91@gmail.com
 
 ## License
 
