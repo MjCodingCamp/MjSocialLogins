@@ -31,7 +31,7 @@ pod 'MjSocialLogins'
 ```ruby
 pod 'MjSocialLogins'
 ```
-* **Step-2 Import Library:** Extend the view controller with **FbLoginStatusDelegate** protocol and add all its required methods. Now create an instance of the FbLoginController class & call beginFbLogin() method on your button click event.
+* **Step-2 Import Library:** Extend the view controller with **FbLoginStatusDelegate** protocol and add all its required methods. Now create an instance of the **FbLoginController** class & call **beginFbLogin()** method on your button click event.
 
 
 ```ruby
@@ -109,7 +109,7 @@ Copy and paste the following XML snippet into the body of your file (<dict>...</
 
 ![Screenshot 2022-08-14 at 10 35 1](https://user-images.githubusercontent.com/66344914/184547952-9e2cfffc-1a99-43b2-9ea9-0f133239863d.png)
 
-* **Step-2 Import Library:** Extend the view controller with **AppleLoginStatusDelegate** protocol and add all its required methods. Now create an instance of the AppleLoginController class & call beginAppleLogin() method on your button click event.
+* **Step-2 Import Library:** Extend the view controller with **AppleLoginStatusDelegate** protocol and add all its required methods. Now create an instance of the **AppleLoginController** class & call **beginAppleLogin()** method on your button click event.
 
 ```ruby 
 //AppleLogin Delegate methods
@@ -133,6 +133,21 @@ extension ContentView: AppleLoginStatusDelegate {
         }
     }
 } 
+```
+
+```ruby 
+Button {
+     let appleLoginController = AppleLoginController(delegate: self)
+     appleLoginController.beginAppleLogin()
+} label: {
+     Text("Continue with Apple")
+         .frame(width: UIScreen.main.bounds.width * 0.8)
+         .padding()
+         .font(.headline)
+         .foregroundColor(Color.white)
+         .background(Color.black)
+         .cornerRadius(8)
+}
 ```
 
 ## Author
