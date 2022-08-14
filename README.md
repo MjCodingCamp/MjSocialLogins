@@ -20,19 +20,21 @@ pod 'MjSocialLogins'
 * **Step-2 Import Library:** Extend the view controller with FbLoginStatusDelegate protocol and add all its required methods. Now create an instance of the FbLoginController class & call beginFbLogin() method on your button click event.
 
 <img width="817" alt="Screenshot 2022-08-14 at 10 07 57 PM" src="https://user-images.githubusercontent.com/66344914/184546405-e34294d7-9aea-410f-a2cc-cdd4e668f368.png">
+
+
 ```ruby
-            Button {
-                let fbLoginController = FbLoginController(delegate: self)
-                fbLoginController.beginFbLogin()
-            } label: {
-                Text("Continue with Facebook")
-                    .frame(width: UIScreen.main.bounds.width * 0.8)
-                    .padding()
-                    .font(.headline)
-                    .foregroundColor(Color.white)
-                    .background(Color.green)
-                    .cornerRadius(8)
-            }
+Button {
+     let fbLoginController = FbLoginController(delegate: self)
+     fbLoginController.beginFbLogin()
+} label: {
+     Text("Continue with Facebook")
+         .frame(width: UIScreen.main.bounds.width * 0.8)
+         .padding()
+         .font(.headline)
+         .foregroundColor(Color.white)
+         .background(Color.green)
+         .cornerRadius(8)
+}
 ```
 
 * **Step-3 Configure Info.plist:** In Xcode right-click on Info.plist, and choose Open As Source Code.
