@@ -31,7 +31,7 @@ pod 'MjSocialLogins'
 ```ruby
 pod 'MjSocialLogins'
 ```
-* **Step-2 Import Library:** Extend the view controller with FbLoginStatusDelegate protocol and add all its required methods. Now create an instance of the FbLoginController class & call beginFbLogin() method on your button click event.
+* **Step-2 Import Library:** Extend the view controller with **FbLoginStatusDelegate** protocol and add all its required methods. Now create an instance of the FbLoginController class & call beginFbLogin() method on your button click event.
 
 
 ```ruby
@@ -102,6 +102,37 @@ Copy and paste the following XML snippet into the body of your file (<dict>...</
 <true/>
 <key>FacebookAdvertiserIDCollectionEnabled</key>
 <true/>
+```
+
+## Integrate Apple Login
+* **Step-1 Add Capability:** Add **Sign in with Apple** capability, You can add this capability by clicking on plus button in your project target settings. If this capability doesn't display in your capabilities list, it mean you need add this capability into your certificates. 
+
+![Screenshot 2022-08-14 at 10 35 1](https://user-images.githubusercontent.com/66344914/184547952-9e2cfffc-1a99-43b2-9ea9-0f133239863d.png)
+
+* **Step-2 Import Library:** Extend the view controller with **AppleLoginStatusDelegate** protocol and add all its required methods. Now create an instance of the AppleLoginController class & call beginAppleLogin() method on your button click event.
+
+```ruby 
+//AppleLogin Delegate methods
+extension ContentView: AppleLoginStatusDelegate {
+    func appleLoginSuccess(accessToken: String, name: String, email: String) {
+        //Handle success result acc to your app logic.
+        debugPrint(accessToken)
+    }
+    
+    func appleLoginFail(error: AppleAuthError) {
+        //Handle failure cases as you want.
+        switch error {
+        case .appleDeclinedPermissions:
+            break
+        case .accessTokenNotFound:
+            break
+        case .userDataNotFound:
+            break
+        case .unknown(let error):
+            debugPrint(error)
+        }
+    }
+} 
 ```
 
 ## Author
