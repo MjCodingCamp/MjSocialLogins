@@ -1,5 +1,5 @@
 # MjSocialLogins
-A simple & lightweight open source library for all standard social login such as apple, google, facebook, which provides the support for both iOS frameworks (UIKit & SwiftUI). With the help of this single library you can integrate Facebook, Apple and Google login in your project.
+A simple & lightweight open source library for all standard social logins such as Apple, Google and Facebook. It provides support for both iOS frameworks (UIKit & SwiftUI). With the help of this single library, you can integrate Facebook, Apple and Google login into your project very quickly.
 
 [![Version](https://img.shields.io/cocoapods/v/MjSocialLogins.svg?style=flat)](https://cocoapods.org/pods/MjSocialLogins)
 [![License](https://img.shields.io/cocoapods/l/MjSocialLogins.svg?style=flat)](https://cocoapods.org/pods/MjSocialLogins)
@@ -11,14 +11,18 @@ A simple & lightweight open source library for all standard social login such as
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## How to use
-* **Step-1 Install Pod:** Add pod 'MjFbLogin' in your pod file and install pod.
+## Integrate Facebook Login
+* **Step-1 Install Pod:** Add pod 'MjSocialLogins' in your pod file and install pod.
 
 ```ruby
-pod 'MjSocialLogin'
+pod 'MjSocialLogins'
 ```
-* **Step-2 Import Library:** Add an extension (FbLoginStatus) in your View or ViewController & add its required methods, now create an instance of FacebookLoginController() class and call beginFbLogin() method on your button click event.  
-<img width="606" alt="Screenshot 2022-07-02 at 11 07 59 PM" src="https://user-images.githubusercontent.com/66344914/177010752-9cdfdbc6-9ce8-43b3-920a-10cc60cae151.png">
+* **Step-2 Import Library:** Extend the view controller with FbLoginStatusDelegate protocol and add all its required methods. Now create an instance of the FbLoginController class & call beginFbLogin() method on your button click event.
+
+<img width="817" alt="Screenshot 2022-08-14 at 10 07 57 PM" src="https://user-images.githubusercontent.com/66344914/184546405-e34294d7-9aea-410f-a2cc-cdd4e668f368.png">
+
+<img width="818" alt="Screenshot 2022-08-14 at 10 15 33 PM" src="https://user-images.githubusercontent.com/66344914/184546694-ae18014f-2ca2-4a63-9ae5-ccbeb0f038aa.png">
+
 
 * **Step-3 Configure Info.plist:** In Xcode right-click on Info.plist, and choose Open As Source Code.
 Copy and paste the following XML snippet into the body of your file (<dict>...</dict>), replacing [APP_ID] with Facebook application id, [CLIENT_TOKEN] value found under Settings > Advanced > Client Token in your App Dashboard and [APP_NAME] with Facebook application name
