@@ -1,9 +1,9 @@
-# MjSocialLogin
-Simple and light weight facebook login library which provides support for UIKit & SwiftUI
+# MjSocialLogins
+A simple & lightweight open source library for all standard social login such as apple, google, facebook, which provides the support for both iOS frameworks (UIKit & SwiftUI). With the help of this single library you can integrate Facebook, Apple and Google login in your project.
 
-[![Version](https://img.shields.io/cocoapods/v/MjFbLogin.svg?style=flat)](https://cocoapods.org/pods/MjFbLogin)
-[![License](https://img.shields.io/cocoapods/l/MjFbLogin.svg?style=flat)](https://cocoapods.org/pods/MjFbLogin)
-[![Platform](https://img.shields.io/cocoapods/p/MjFbLogin.svg?style=flat)](https://cocoapods.org/pods/MjFbLogin)
+[![Version](https://img.shields.io/cocoapods/v/MjSocialLogins.svg?style=flat)](https://cocoapods.org/pods/MjSocialLogins)
+[![License](https://img.shields.io/cocoapods/l/MjSocialLogins.svg?style=flat)](https://cocoapods.org/pods/MjSocialLogins)
+[![Platform](https://img.shields.io/cocoapods/p/MjSocialLogins.svg?style=flat)](https://cocoapods.org/pods/MjSocialLogins)
 [![UIKit](https://img.shields.io/badge/UIKit-orange.svg?style=flat)](https://developer.apple.com/documentation/uikit)
 [![SwiftUI](https://img.shields.io/badge/SwiftUI-blue.svg?style=flat)](https://developer.apple.com/xcode/swiftui/)
 
