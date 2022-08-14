@@ -19,8 +19,36 @@ pod 'MjSocialLogins'
 ```
 * **Step-2 Import Library:** Extend the view controller with FbLoginStatusDelegate protocol and add all its required methods. Now create an instance of the FbLoginController class & call beginFbLogin() method on your button click event.
 
-<img width="817" alt="Screenshot 2022-08-14 at 10 07 57 PM" src="https://user-images.githubusercontent.com/66344914/184546405-e34294d7-9aea-410f-a2cc-cdd4e668f368.png">
 
+```ruby
+//FbLogin Delegate methods
+extension ContentView: FbLoginStatusDelegate {
+    func fbLoginSuccess(token: String, userData: [String : Any]) {
+        //Handle success result acc to your app logic.
+        debugPrint(userData)
+    }
+    
+    func fbLoginFail(error: FbAuthError) {
+        switch error {
+        case .facebookDeclinedPermissions:
+            break
+        case .tokenNotFound:
+            break
+        case .userDataNotFound:
+            break
+        case .facebookLoginCancelled:
+            break
+        case .unknown(let error):
+            debugPrint(error)
+        }
+    }
+    
+    func fbLoginAccess(status: Bool) {
+        //You can use this delegate method to start your loader.
+        debugPrint(status)
+    }
+}
+```
 
 ```ruby
 Button {
