@@ -26,12 +26,8 @@ pod 'MjSocialLogins'
 ```
 
 ## Integrate Facebook Login
-* **Step-1 Install Pod:** Add pod 'MjSocialLogins' in your pod file and install pod.
 
-```ruby
-pod 'MjSocialLogins'
-```
-* **Step-2 Import Library:** Extend the view controller with **FbLoginStatusDelegate** protocol and add all its required methods. Now create an instance of the **FbLoginController** class & call **beginFbLogin()** method on your button click event.
+* **Step-1 Import Library:** Extend the view controller with **FbLoginStatusDelegate** protocol and add all its required methods. Now create an instance of the **FbLoginController** class & call **beginFbLogin()** method on your button click event.
 
 
 ```ruby
@@ -79,7 +75,7 @@ Button {
 }
 ```
 
-* **Step-3 Configure Info.plist:** In Xcode right-click on Info.plist, and choose Open As Source Code.
+* **Step-2 Configure Info.plist:** In Xcode right-click on Info.plist, and choose Open As Source Code.
 Copy and paste the following XML snippet into the body of your file (<dict>...</dict>), replacing [APP_ID] with Facebook application id, [CLIENT_TOKEN] value found under Settings > Advanced > Client Token in your App Dashboard and [APP_NAME] with Facebook application name
 
 ```ruby
@@ -107,7 +103,7 @@ Copy and paste the following XML snippet into the body of your file (<dict>...</
 ## Integrate Apple Login
 * **Step-1 Add Capability:** Add **Sign in with Apple** capability, You can add this capability by clicking on plus button in your project target settings. If this capability doesn't display in your capabilities list, it mean you need add this capability into your certificates. 
 
-![Screenshot 2022-08-14 at 10 35 1](https://user-images.githubusercontent.com/66344914/184547952-9e2cfffc-1a99-43b2-9ea9-0f133239863d.png)
+![Group 1](https://user-images.githubusercontent.com/66344914/184548254-68df0822-8488-49cc-96c9-37b9a7620284.png)
 
 * **Step-2 Import Library:** Extend the view controller with **AppleLoginStatusDelegate** protocol and add all its required methods. Now create an instance of the **AppleLoginController** class & call **beginAppleLogin()** method on your button click event.
 
