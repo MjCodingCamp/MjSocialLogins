@@ -146,6 +146,11 @@ Button {
 }
 ```
 
+## Integrate Google Login
+* **Step-1 Add URL Types:** Add your Reversed Client ID as a URL type into your project plist file.  
+
+![Group 1 (1)](https://user-images.githubusercontent.com/66344914/184591718-e7d38c08-23b8-4f6a-b3a8-65105f203ca0.png)
+
 ## Author
 
 Mohammad Jeeshan
