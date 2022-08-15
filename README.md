@@ -151,6 +151,52 @@ Button {
 
 ![Group 1 (1)](https://user-images.githubusercontent.com/66344914/184591718-e7d38c08-23b8-4f6a-b3a8-65105f203ca0.png)
 
+* **Step-2 Import Library:** Extend the view controller with **GoogleLoginStatusDelegate** protocol and add all its required methods. Now create an instance of the **GoogleLoginController** class & call **beginGoogleLogin(clientID: "Pass Your Google Client Id")** method on your button click event.
+
+```ruby 
+//GoogleLogin Delegate methods
+extension ContentView: GoogleLoginStatusDelegate {
+    func googleLoginSuccess(userID: String, idToken: String, userProfile: GIDProfileData) {
+        //Handle user data according to your app logic.
+        debugPrint(userProfile.email)
+        debugPrint(userProfile.name)
+    }
+    
+    func googleLoginFail(error: GoogleAuthError) {
+        //Handle error as you want
+        switch error {
+        case .rootViewControllerNotFound:
+            break
+        case .userIdNotFound:
+            break
+        case .userIdTokenNotFound:
+            break
+        case .userDataNotFound:
+            break
+        case .userProfileNotFound:
+            break
+        case .unknown(let error):
+            debugPrint(error)
+        }
+    }
+}
+```
+
+```ruby
+Button {
+     let googleLoginController = GoogleLoginController(delegate: self)
+     googleLoginController.beginGoogleLogin(clientID: "1052912351070-ir4udtjti6n0oqav7kbjmc8beomcllmj.apps.googleusercontent.com")
+} label: {
+     Text("Continue with Google")
+         .frame(width: UIScreen.main.bounds.width * 0.8)
+         .padding()
+         .font(.headline)
+         .foregroundColor(Color.white)
+         .background(Color.green)
+         .cornerRadius(8)
+}
+```
+
 ## Author
 
 Mohammad Jeeshan
